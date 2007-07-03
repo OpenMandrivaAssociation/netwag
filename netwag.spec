@@ -9,7 +9,7 @@ Version: %{version}
 Release: %{release}
 Source0: %{name}-%{version}-src.tgz
 Source1: %{name}-%{version}-doc_html.tgz
-Patch0: %name-5.4.0.genemake.patch.bz2
+Patch0: netwag-5.35.0-prefix.patch
 License: LGPL
 Group: Networking/Other
 Url: http://www.laurentconstantin.com/fr/netw/netwox/
@@ -17,7 +17,7 @@ BuildRoot: %{_tmppath}/%{name}-buildroot
 Requires: netwox = %version
 BuildRequires: tk
 BuildRequires: netwox = %version
-BuildRequires: tk
+BuildRequires: xterm
 BuildArch: noarch
 
 %description
@@ -39,14 +39,14 @@ Netwag permet de :
 %prep
 %setup -q -n %name-%version-src
 %setup -q -D -T -a1 -n %name-%version-src
-%patch0 -p1
+%patch0 -p0
 
-perl -pi -e 's!^NETWIBDEF_INSTPREFIX=.*!NETWIBDEF_INSTPREFIX=/usr!' src/config.dat
-perl -pi -e 's!^NETWOXDEF_INSTPREFIX=.*!NETWOXDEF_INSTPREFIX=/usr!' src/config.dat
+#perl -pi -e 's!^NETWIBDEF_INSTPREFIX=.*!NETWIBDEF_INSTPREFIX=/usr!' src/config.dat
+#perl -pi -e 's!^NETWOXDEF_INSTPREFIX=.*!NETWOXDEF_INSTPREFIX=/usr!' src/config.dat
 # Hacking for lib64
-perl -pi -e 's!^NETWIBDEF_INSTLIB=.*!NETWIBDEF_INSTLIB=%_libdir!' src/config.dat
+#perl -pi -e 's!^NETWIBDEF_INSTLIB=.*!NETWIBDEF_INSTLIB=%_libdir!' src/config.dat
 
-perl -pi -e 's!^NETWIBDEF_SYSARCH=.*!NETWIBDEF_SYSARCH=%_arch!' src/config.dat
+#perl -pi -e 's!^NETWIBDEF_SYSARCH=.*!NETWIBDEF_SYSARCH=%_arch!' src/config.dat
 
 %build
 cd src
