@@ -1,14 +1,14 @@
 %define name netwag
-%define version 5.4.0
-%define release 1mdk
+%define version 5.35.0
+%define release %mkrel 1
 
 Summary: A graphic front-end to netwox
 Summary(fr): Une interface graphique à netwox.
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: %{name}-%{version}-src.tar.bz2
-Source1: %{name}-%{version}-doc_html.tar.bz2
+Source0: %{name}-%{version}-src.tgz
+Source1: %{name}-%{version}-doc_html.tgz
 Patch0: %name-5.4.0.genemake.patch.bz2
 License: LGPL
 Group: Networking/Other
