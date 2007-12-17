@@ -13,7 +13,6 @@ Patch0: netwag-5.35.0-prefix.patch
 License: LGPL
 Group: Networking/Other
 Url: http://www.laurentconstantin.com/fr/netw/netwox/
-BuildRoot: %{_tmppath}/%{name}-buildroot
 Requires: netwox = %version
 BuildRequires: tk
 BuildRequires: netwox = %version
