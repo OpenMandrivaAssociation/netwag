@@ -1,6 +1,6 @@
 %define name netwag
 %define version 5.35.0
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary: A graphic front-end to netwox
 Summary(fr): Une interface graphique à netwox.
