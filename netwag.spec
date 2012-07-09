@@ -1,19 +1,18 @@
 %define name netwag
-%define version 5.35.0
-%define release %mkrel 5
+%define version 5.39.0
+%define release 1
 
 Summary: A graphic front-end to netwox
 Summary(fr): Une interface graphique à netwox.
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: %{name}-%{version}-src.tgz
-Source1: %{name}-%{version}-doc_html.tgz
+Source0: http://downloads.sourceforge.net/project/ntwag/netwag/5.39/%{name}-%{version}-src.tgz
+Source1: http://downloads.sourceforge.net/project/ntwag/netwag/5.39/%{name}-%{version}-doc_html.tgz
 Patch0: netwag-5.35.0-prefix.patch
 License: LGPL
 Group: Networking/Other
 Url: http://www.laurentconstantin.com/fr/netw/netwox/
-BuildRoot: %{_tmppath}/%{name}-buildroot
 Requires: netwox = %version
 BuildRequires: tk
 BuildRequires: netwox = %version
@@ -54,15 +53,10 @@ cd src
 %make GCCOPT="$RPM_OPT_FLAGS -D_BSD_SOURCE -D__BSD_SOURCE -D__FAVOR_BSD -DHAVE_NET_ETHERNET_H"
 
 %install
-rm -rf $RPM_BUILD_ROOT
 cd src
 %makeinstall_std
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files
-%defattr(-,root,root)
 %doc INSTALL.TXT README.TXT
 %doc doc/*.txt
 %doc %name-%version-doc_html/*
