@@ -3,7 +3,6 @@
 %define release 1
 
 Summary: A graphic front-end to netwox
-Summary(fr): Une interface graphique à netwox.
 Name: %{name}
 Version: %{version}
 Release: %{release}
@@ -27,25 +26,10 @@ Netwag provides:
   - exchange data true the integrate clipboard
   - ect.
 
-%description -l fr
-Netwag permet de :
-  - chercher parmi les outils de netwox
-  - exécuter les outils dans une nouvelle fenêtre, ou une zone texte
-  - garder un historique des commandes
-  - échanger des données en utilisant les deux presse-papier intégrés
-  - etc.
-
 %prep
 %setup -q -n %name-%version-src
 %setup -q -D -T -a1 -n %name-%version-src
 %patch0 -p0
-
-#perl -pi -e 's!^NETWIBDEF_INSTPREFIX=.*!NETWIBDEF_INSTPREFIX=/usr!' src/config.dat
-#perl -pi -e 's!^NETWOXDEF_INSTPREFIX=.*!NETWOXDEF_INSTPREFIX=/usr!' src/config.dat
-# Hacking for lib64
-#perl -pi -e 's!^NETWIBDEF_INSTLIB=.*!NETWIBDEF_INSTLIB=%_libdir!' src/config.dat
-
-#perl -pi -e 's!^NETWIBDEF_SYSARCH=.*!NETWIBDEF_SYSARCH=%_arch!' src/config.dat
 
 %build
 cd src
