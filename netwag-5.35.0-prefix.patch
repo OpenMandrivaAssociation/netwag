@@ -1,0 +1,23 @@
+--- src/config.dat.old	2007-07-03 20:53:08.000000000 +0800
++++ src/config.dat	2007-07-03 21:05:16.000000000 +0800
+@@ -7,7 +7,7 @@
+ 
+ ##########################################################################
+ ### installation prefix directory of netwox
+-NETWOXDEF_INSTPREFIX=/usr/local
++NETWOXDEF_INSTPREFIX=/usr
+ 
+ ### installation destination directory of netwox
+ NETWOXDEF_INSTDESTDIR=""
+@@ -18,9 +18,9 @@
+ 
+ ##########################################################################
+ ### directories where netwag will be installed
+-NETWAGDEF_INSTPREFIX=/usr/local
++NETWAGDEF_INSTPREFIX=/usr
+ NETWAGDEF_INSTBIN=${NETWAGDEF_INSTPREFIX}/bin
+-NETWAGDEF_INSTMAN=${NETWAGDEF_INSTPREFIX}/man
++NETWAGDEF_INSTMAN=${NETWAGDEF_INSTPREFIX}/share/man
+ NETWAGDEF_INSTMAN1=${NETWAGDEF_INSTMAN}/man1
+ 
+ ### installation destination directory
