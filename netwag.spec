@@ -46,3 +46,33 @@ cd src
 %doc %name-%version-doc_html/*
 %_bindir/netwag*
 %_mandir/man1/*
+
+
+%changelog
+* Tue Jul 10 2012 Alexander Khrukin <akhrukin@mandriva.org> 5.39.0-1
++ Revision: 808732
+- rpmlint
+- version update 5.39.0
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - the mass rebuild of 2010.0 packages
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 5.35.0-4mdv2010.0
++ Revision: 430168
+- rebuild
+
+* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 5.35.0-3mdv2009.0
++ Revision: 241093
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+* Tue Jul 03 2007 Funda Wang <fwang@mandriva.org> 5.35.0-1mdv2008.0
++ Revision: 47502
+- rediff patch0
+- BR xterm
+- New version
+- Import netwag
+
