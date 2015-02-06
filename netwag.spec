@@ -1,6 +1,6 @@
 %define name netwag
 %define version 5.39.0
-%define release 1
+%define release 2
 
 Summary: A graphic front-end to netwox
 Name: %{name}
