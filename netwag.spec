@@ -11,7 +11,7 @@ Source1: http://downloads.sourceforge.net/project/ntwag/netwag/5.39/%{name}-%{ve
 Patch0: netwag-5.35.0-prefix.patch
 License: LGPL
 Group: Networking/Other
-Url: http://www.laurentconstantin.com/fr/netw/netwox/
+Url: https://www.laurentconstantin.com/fr/netw/netwox/
 Requires: netwox = %version
 BuildRequires: tk
 BuildRequires: netwox = %version
